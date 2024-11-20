@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var message: String = "This is default string"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(message)
+                .padding()
+            TestView(message: $message)
         }
-        .padding()
     }
 }
 
